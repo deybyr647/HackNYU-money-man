@@ -1,0 +1,15 @@
+{
+  "name": "money-man-vercel",
+  "version": "1.0.0",
+  "description": "Serverless functions for our HackNYU project Money-Man",
+  "main": "",
+  "scripts": {
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/node": "^2.9.6",
+    "mongodb": "^5.0.1"
+  }
+}
