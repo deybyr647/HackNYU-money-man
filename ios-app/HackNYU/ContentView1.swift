@@ -121,8 +121,8 @@ struct loginInput: View {
                 NavigationView{
                     TransactionHistory()
                 }.tabItem{
-                    Image(systemName: "person")
-                    Text("Profile")
+                    Image(systemName: "chart.bar.xaxis")
+                    Text("Transactions")
                 }
             }
         }
