@@ -2,11 +2,11 @@
 //  ContentView.swift
 //  HackNYU
 //
-//  Created by Arnav Kumar on 2/17/23.
+//  Created by Arnav Kumar on 2/18/23.
 //
 import SwiftUI
 
-struct ContentView2: View {
+struct ContentView1: View {
     @State private var isShowingDetailView = false
     @State private var isShowingDetailView2 = false
     
@@ -14,6 +14,7 @@ struct ContentView2: View {
     var body: some View {
         NavigationView{
             ZStack {
+               
                 LinearGradient(gradient: Gradient(colors: [.purple, .orange]),
                                startPoint: .top, endPoint: .bottom).ignoresSafeArea()
                 HStack {
@@ -90,12 +91,32 @@ struct InputFieldsView: View {
     }
 }
 struct loginInput: View {
+    @State private var HackNYUApp = true
+    @State private var showTabView = false
     @State private var isShowingDetailView3 = false
     @State private var username: String = ""
     @State private var password: String = ""
     var body: some View {
-        ZStack{
-            
+        if showTabView{
+            TabView{
+                NavigationView{
+                    Profile()
+                }.tabItem{
+                    Image(systemName: "airplane.circle.fill")
+                    Text("Discover")
+                }
+                NavigationView{
+                    HomePage()
+                }.tabItem{
+                    Image(systemName: "airplane.circle")
+                    Text("Discover")
+                }
+                
+            }
+        }
+        else{
+            ZStack{
+                
                 VStack {
                     
                     TextField("email", text: $username)
@@ -112,17 +133,21 @@ struct loginInput: View {
                         
                         Button("Let's Go!") {
                             isShowingDetailView3 = true
+                            showTabView = true
+                            HackNYUApp = false
                         }.position(x: 180, y: 100).buttonStyle(.borderedProminent)
                         
                     }
                 }
                 
-            .padding()
+                .padding()
+            }
         }
-    }
+        }
+    
 }
 struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
-            ContentView2()
+            ContentView1()
         }
     }

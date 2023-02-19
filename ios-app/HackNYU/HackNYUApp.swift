@@ -11,7 +11,30 @@ import SwiftUI
 struct HackNYUApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView2()
+            ContentView1()
+        }
+    }
+} /*
+struct showTabView: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView1()
+            TabView{
+                NavigationView{
+                    Profile()
+                }.tabItem{
+                    Image(systemName: "airplane.circle.fill")
+                    Text("Discover")
+                }
+                NavigationView{
+                    HomePage()
+                }.tabItem{
+                    Image(systemName: "airplane.circle")
+                    Text("Discover")
+                }
+                
+            }
         }
     }
 }
+*/

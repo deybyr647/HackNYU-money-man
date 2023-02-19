@@ -13,6 +13,7 @@ struct HomePage: View {
             
             Image("DB").resizable()
                 .frame(width: 255, height: 255).position(x:180,y: 150).padding()
+            /** The Mini Box, and doesn't work as well*/
             GroupBox{
                 VStack(alignment: .leading){
                     Text("Current Pooled Balance").font(.headline)
@@ -21,14 +22,49 @@ struct HomePage: View {
                     }
                 }
             }
-            GroupBox( 
+            /** The Current Pooled Balance*/
+            GroupBox(
                         label: Label("Current Pooled Balance", systemImage: "chart.bar")
                             .foregroundColor(.green)
                     ) {
                         Text("$"+"2100")
                     }.padding()
+            GroupBox(
+                        label: Label("Current Pooled Balance", systemImage: "chart.bar")
+                            .foregroundColor(.green)
+                    ) {
+                        Text("$"+"2100")
+                    }.padding().position(x:197,y:25)
+            GroupBox(
+                        label: Label("Current Pooled Balance", systemImage: "chart.bar")
+                            .foregroundColor(.green)
+                    ) {
+                        Text("$"+"2100")
+                    }.padding().position(x:197,y:-3)
+            GroupBox(
+                        label: Label("Current Pooled Balance", systemImage: "chart.bar")
+                            .foregroundColor(.green)
+                    ) {
+                        Text("$"+"2100")
+                    }.padding().position(x:197,y:-33)
             
-        }
+            /** The heart Stuff can be used to add more types of things */
+            
+            LazyVGrid(columns: [.init(), .init()]) {
+                            ForEach(0..<10) { _ in
+                                GroupBox(
+                                    label: Label("Heart Rate", systemImage: "heart.fill")
+                                        .foregroundColor(.red)
+                                ) {
+                                    Text("Your hear rate is 90 BPM.")
+                                }
+                            }
+            }
+            
+            
+            
+        }.navigationTitle("MoneyMan").bold()
+
         
     }
 }
