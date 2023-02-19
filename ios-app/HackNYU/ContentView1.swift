@@ -102,16 +102,21 @@ struct loginInput: View {
                 NavigationView{
                     Profile()
                 }.tabItem{
-                    Image(systemName: "airplane.circle.fill")
-                    Text("Discover")
+                    Image(systemName: "person")
+                    Text("Profile")
                 }
                 NavigationView{
                     HomePage()
                 }.tabItem{
-                    Image(systemName: "airplane.circle")
-                    Text("Discover")
+                    Image(systemName: "house.circle.fill")
+                    Text("Home")
                 }
-                
+                NavigationView{
+                    ChatGPT()
+                }.tabItem{
+                    Image(systemName: "externaldrive.badge.wifi")
+                    Text("Chat-GPT")
+                }
             }
         }
         else{
