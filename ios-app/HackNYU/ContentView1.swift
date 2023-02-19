@@ -17,6 +17,7 @@ struct ContentView1: View {
                
                 LinearGradient(gradient: Gradient(colors: [.purple, .orange]),
                                startPoint: .top, endPoint: .bottom).ignoresSafeArea()
+                Text("Money Man").bold().foregroundColor(.white).font(.system(size: 30))
                 HStack {
                                 NavigationLink(destination: InputFieldsView(), isActive: $isShowingDetailView) { EmptyView() }
 
@@ -116,6 +117,12 @@ struct loginInput: View {
                 }.tabItem{
                     Image(systemName: "externaldrive.badge.wifi")
                     Text("Chat-GPT")
+                }
+                NavigationView{
+                    TransactionHistory()
+                }.tabItem{
+                    Image(systemName: "person")
+                    Text("Profile")
                 }
             }
         }
