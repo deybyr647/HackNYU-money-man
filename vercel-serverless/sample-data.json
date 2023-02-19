@@ -1,0 +1,23 @@
+{
+  "name": {
+    "first": "John",
+    "last": "Doe"
+  },
+  "email": "johndoe@example.com",
+  "bank accounts": [
+    {
+      "name": "Checking BofA",
+        "last balance": 1000,
+        "last balance date": "2015-01-01",
+        "routing number": "123456789",
+        "account number": "123456789"
+    },
+    {
+      "name": "Savings Chase",
+      "last balance": 40000,
+      "last balance date": "2017-01-01",
+      "routing number": "123456789",
+      "account number": "123456789"
+    }
+  ]
+}
