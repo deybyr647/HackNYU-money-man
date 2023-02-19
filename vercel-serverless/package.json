@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "Serverless functions for our HackNYU project Money-Man",
   "main": "",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@vercel/node": "^2.9.6",
-    "mongodb": "^5.0.1"
+    "mongodb": "^5.0.1",
+    "plaid": "^12.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.0"
   }
 }
